@@ -1,0 +1,16 @@
+[package]
+name = "halo2_code"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rand_core = { version = "0.6", features = ["getrandom"] }
+halo2_proofs = { version = "0.3.0", default-features = false }
+pasta_curves = "0.5"
+ff = "0.13"
+
+
+[dev-dependencies]
+rand_core = { version = "0.6", default-features = false, features = [
+    "getrandom",
+] }
