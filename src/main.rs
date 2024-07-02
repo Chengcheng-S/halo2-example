@@ -19,10 +19,11 @@ fn main() {
         &params,
         &pk,
         &[MyCircuit, MyCircuit],
-        &[],
+        &[], // failed
         OsRng,
         &mut transcript_for_proof,
     );
+    // because of the instances.len != circuit.len so must be failed.
     assert!(matches!(proof.unwrap_err(), Error::InvalidInstances));
 
     // Create proof with correct number of instances
